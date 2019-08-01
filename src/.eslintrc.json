@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["esnext", "plugin:react/recommended", "plugin:prettier/recommended", "prettier/react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "immutable", "prettier"],
+  "rules": {
+    "no-var": "error",
+    "no-undef": "error",
+    "no-param-reassign": "error",
+    "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "react/prop-types": "off",
+    "immutable/no-let": "error",
+    "immutable/no-this": "error",
+    "immutable/no-mutation": "error",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
+}
